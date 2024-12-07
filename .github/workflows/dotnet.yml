@@ -19,8 +19,8 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
-      run: dotnet restore ./todo-app-api
+      run: dotnet restore ./TodoAppApi
     - name: Build
-      run: dotnet build ./todo-app-api --no-restore
+      run: dotnet build ./TodoAppApi --no-restore
     - name: Test
-      run: dotnet test ./todo-app-api --no-build --verbosity normal
+      run: dotnet test ./TodoAppApi --no-build --verbosity normal
