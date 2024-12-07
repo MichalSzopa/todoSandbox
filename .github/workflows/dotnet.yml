@@ -13,16 +13,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Navigate to api project
-      run: cd todo-app-api
     - uses: actions/checkout@v4
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./todo-app-api
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build ./todo-app-api --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test ./todo-app-api --no-build --verbosity normal
