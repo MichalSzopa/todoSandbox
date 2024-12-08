@@ -32,4 +32,4 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore ./TodoAppApi
       - name: Test
-        run: dotnet test ./TodoAppApi --no-build --verbosity normal
+        run: dotnet test ./TodoAppApi
